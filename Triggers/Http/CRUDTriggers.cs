@@ -13,17 +13,16 @@ namespace Triggers.Http
     public static class CRUDTriggers
     {
         [FunctionName("DocumentDbGet")]
-        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get")]HttpRequestMessage req, TraceWriter log, [DocumentDB("PantryApp", "pantrylists")]IEnumerable<Pantry> pantrys)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get")]HttpRequestMessage req, TraceWriter log, [DocumentDB("DbName", "CollectionName")]IEnumerable<ModelToReadFromDb> items)
         {
-            var getstuff = pantrys.Where(x => x.PantryName == "test2");
+            //Can perform operations on the "items" variable, which will be the result of the table/collection you specify
 
             return req.CreateResponse(HttpStatusCode.OK);
         }
 
-        public class Pantry
+        public class ModelToReadFromDb
         {
-            public string PantryName { get; set; }
-            public string UserId { get; set; }
+            public string Id { get; set; }
         }
     }
 }
