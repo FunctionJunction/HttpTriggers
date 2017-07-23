@@ -3,7 +3,8 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
-    "developmentStorage": "UseDevelopmentStorage=true"
+    "developmentStorage": "UseDevelopmentStorage=true",
+    "serviceBusAccount": "Endpoint=sb://simonfunctiontest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=v0VCdzYvT8K4ADCVjBAK4RRNbQPlGFMc66/EJx+8uMw="
   }
   
 
