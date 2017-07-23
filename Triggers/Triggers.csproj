@@ -23,5 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Http\" />
+    <Folder Include="StorageQueue\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 </Project>
