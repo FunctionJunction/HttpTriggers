@@ -15,13 +15,5 @@ namespace Triggers.StorageQueue
             var message = JsonConvert.DeserializeObject<SendEmailMessage>(queueMessage);
             //Go send e-mail
         }
-
-        [FunctionName("SendEmail2")]
-        public static void SendEmailWithServiceBusQueue([ServiceBusTrigger("emailoutput", Connection = "serviceBusAccount")]SendEmailMessage queueMessage, TraceWriter log)
-        {
-            log.Info($"C# Service Bus trigger function processed: {queueMessage}");
-            
-            //Go send e-mail
-        }
     }
 }
